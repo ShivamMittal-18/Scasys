@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Founders Grotesk';
+  src: url('./FoundersGrotesk-Semibold.ttf') format('truetype');
+  font-weight: 600; /* or 'normal' if it's not semibold */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('./NeueMontreal-Regular.ttf') format('truetype');
+  font-weight: 400; /* or 'normal' if it's not semibold */
+  font-style: normal;
+}

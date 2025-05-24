@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@import './assets/fonts/fonts.css';
+
+
+body{
+    background-color: #F1F1F1;
+}
+.masker,.text{
+    font-family: 'Founders Grotesk';
+}
+.start,.landing-text{
+     font-family: 'Neue Montreal';
+}
+#marquee::-webkit-scrollbar{
+    display: none;
+}
+
+body::-webkit-scrollbar{
+    display: none; 
+    
+}
+
+.card{
+    transform: translate(0);
+} 
