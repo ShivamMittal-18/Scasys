@@ -52,7 +52,7 @@ const App = () => {
           ref={scrollRef}
           className="w-full bg-[#F1F1F1]"
         >
-          <Navbar />
+          <Navbar loading={!loadingDone} />
           <LandingPage />
           <Marquee />
           <HowWeWork />

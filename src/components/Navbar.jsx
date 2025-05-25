@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 // Removed react-icons import as it's causing resolution issues in this environment.
 // import { HiMenuAlt3, HiX } from "react-icons/hi"; // This line was removed
 
-const Navbar = () => {
+const Navbar = ({ loading }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -95,7 +95,8 @@ const Navbar = () => {
       {/* Main Navbar Container */}
     <div className={`w-full start fixed z-[999] transition-transform duration-500 ease-in-out ${isVisible ? "translate-y-0 animate-slide-in" : "-translate-y-full"}`}>
 
-        <div className="bg-blur backdrop-blur-lg ">
+        <div className={`${loading ? "bg-transparent" : "backdrop-blur-lg bg-white/60"} transition-colors duration-500`}>
+
           <div className="px-5 sm:px-8 py-4 flex justify-between items-center max-w-7xl mx-auto">
             {/* Logo Section */}
             <div className="flex items-center gap-3">
