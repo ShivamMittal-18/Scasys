@@ -8,12 +8,10 @@ import Featured from './components/Featured'
 import Cards from './components/Cards'
 import Playful from './components/Playful'
 import Footer from './components/Footer'
-// import OurServices from './components/Ourservices'
-
 import GetInTouch from './components/GetInTouch'
 import LocomotiveScroll from 'locomotive-scroll';
 import HowWeWork from './components/HowWeWork'
-import OurServices from './components/Ourservices'
+import OurServices from './components/OurServices'
 import WhyScacys from './components/WhyScasys'
 
 
@@ -24,13 +22,10 @@ const locomotiveScroll = new LocomotiveScroll();
     <Navbar/>
     <LandingPage/>
     <Marquee/>
-    {/* <About/> */}
     <HowWeWork/>
     <Eyes/>
     <OurServices/>
-    {/* <OurServices/> */}
     <Cards/>
-
     <Featured/>
     <Playful/>
     <WhyScacys/>
