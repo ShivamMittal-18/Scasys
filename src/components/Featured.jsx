@@ -7,7 +7,9 @@ const Featured = () => {
   const [hovering3, sethovering3] = useState(false);
 
   return (
-    <div id="Our Projects" className="w-full py-4 sm:py-6 md:py-8 lg:py-[5vh]">
+    <div
+    
+    id="Our Projects" className="w-full py-4 sm:py-6 md:py-8 lg:py-[5vh]">
       <div className="px-3 sm:px-4 md:px-6 lg:px-[7vh] border-b pb-6 sm:pb-8 md:pb-10">
         <h1 className="uppercase start text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-[8vh] leading-none font-bold">
           Featured Projects

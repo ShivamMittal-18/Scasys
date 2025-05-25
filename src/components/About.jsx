@@ -2,7 +2,9 @@ import React from "react";
 
 const About = () => {
   return (
-    <div  
+    <div 
+    
+    
       className="w-full bg-[#CEEA68] rounded-tl-3xl rounded-tr-3xl py-10 relative z-30"
     >
       <h1 className="start text-[3vw] leading-[3vw] p-[3vw]">

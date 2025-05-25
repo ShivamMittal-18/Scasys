@@ -6,6 +6,7 @@ const Marquee = () => {
 
   return (
     <div
+  
       id="marquee"
       className="w-full z-10 py-10 md:py-12 bg-[#1C398E] overflow-hidden"
     >

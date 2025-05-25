@@ -41,9 +41,9 @@ const Eyes = () => {
         data-scroll-speed="-0.7"
         className='absolute w-full bg-cover bg-center h-full top-20 bg-[url("https://ochi.design/wp-content/uploads/2022/05/Top-Viewbbcbv-1-scaled.jpg")]'
       >
-        <div className="flex gap-10 justify-center absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[85%]">
+        <div className="flex gap-10 justify-center absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[85%] ">
           {/* Eye 1 */}
-          <div className="flex justify-center items-center bg-[#F1F1F1] h-[30vw] w-[30vw] rounded-full">
+          <div className="flex justify-center items-center bg-[#F1F1F1] h-[15vw] w-[15vw] min-h-[100px] min-w-[100px] max-h-[180px] max-w-[180px] rounded-full">
             <div
               style={{
                 transform: `translate(${offset1.x}px, ${offset1.y}px)`,
@@ -54,13 +54,13 @@ const Eyes = () => {
                 style={{ transform: `rotate(${rotate1}deg)` }}
                 className="absolute line top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] w-full h-[1.5vw]"
               >
-                <div className="h-[5vw] w-[5vw] bg-[#F1F1F1] rounded-full"></div>
+                <div className="h-[1.5vw] w-[1.5vw] bg-[#F1F1F1] rounded-full"></div>
               </div>
             </div>
           </div>
 
           {/* Eye 2 */}
-          <div className="flex justify-center items-center bg-[#F1F1F1] h-[30vw] w-[30vw] rounded-full">
+          <div className="flex justify-center items-center bg-[#F1F1F1] h-[15vw] w-[15vw] min-h-[100px] min-w-[100px] max-h-[180px] max-w-[180px] rounded-full">
             <div
               style={{
                 transform: `translate(${offset2.x}px, ${offset2.y}px)`,
@@ -71,7 +71,7 @@ const Eyes = () => {
                 style={{ transform: `rotate(${rotate2}deg)` }}
                 className="absolute line top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] w-full h-[1.5vw]"
               >
-                <div className="h-[5vw] w-[5vw] bg-[#F1F1F1] rounded-full"></div>
+                <div className="h-[1.5vw] w-[1.5vw] bg-[#F1F1F1] rounded-full"></div>
               </div>
             </div>
           </div>

@@ -71,8 +71,8 @@ const GetInTouch = () => {
                 value: '+91 7300788546'
               }
             ].map((item, i) => (
-              <div key={i} className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center shrink-0">
+              <div key={i} className="flex items-start space-x-4"> {/* Removed hover effects from this div */}
+                <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 transform hover:scale-110 hover:shadow-md cursor-pointer"> {/* Added hover effects to the icon container */}
                   {item.icon}
                 </div>
                 <div>
@@ -90,16 +90,16 @@ const GetInTouch = () => {
                 Connect With Us
               </h3>
               <div className="flex flex-wrap gap-3">
-                <button className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition">
+                <button className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
                   <Linkedin className="w-5 h-5 text-white" />
                 </button>
-                <button className="w-10 h-10 bg-blue-400 rounded-lg flex items-center justify-center hover:bg-blue-500 transition">
+                <button className="w-10 h-10 bg-blue-400 rounded-lg flex items-center justify-center hover:bg-blue-500 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
                   <Twitter className="w-5 h-5 text-white" />
                 </button>
-                <button className="w-10 h-10 bg-blue-800 rounded-lg flex items-center justify-center hover:bg-blue-900 transition">
+                <button className="w-10 h-10 bg-blue-800 rounded-lg flex items-center justify-center hover:bg-blue-900 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
                   <Facebook className="w-5 h-5 text-white" />
                 </button>
-                <button className="w-10 h-10 bg-pink-500 rounded-lg flex items-center justify-center hover:bg-pink-600 transition">
+                <button className="w-10 h-10 bg-pink-500 rounded-lg flex items-center justify-center hover:bg-pink-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
                   <Instagram className="w-5 h-5 text-white" />
                 </button>
               </div>
@@ -122,7 +122,7 @@ const GetInTouch = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   placeholder="Your name"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" // No hover on inputs
                 />
               </div>
 
@@ -136,7 +136,7 @@ const GetInTouch = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="Your email"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" // No hover on inputs
                 />
               </div>
 
@@ -150,13 +150,13 @@ const GetInTouch = () => {
                   onChange={handleInputChange}
                   placeholder="How can we help you?"
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-vertical"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-vertical" // No hover on inputs
                 />
               </div>
 
               <button
                 onClick={handleSubmit}
-                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition flex items-center justify-center space-x-2"
+                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-300 flex items-center justify-center space-x-2 transform hover:-translate-y-1 hover:shadow-lg"
               >
                 <span>Send Message</span>
                 <Send className="w-5 h-5" />

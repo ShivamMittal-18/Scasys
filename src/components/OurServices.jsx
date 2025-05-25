@@ -82,24 +82,6 @@ const OurServices = () => {
             </div>
           ))}
         </div>
-
-        {/* Optional CTA Section */}
-        <div className="mt-8 sm:mt-12 md:mt-16 text-center">
-          <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 shadow-sm border border-gray-100 max-w-2xl mx-auto">
-            <h3 className="text-lg xs:text-xl sm:text-2xl font-semibold text-blue-900 mb-2 sm:mb-3 md:mb-4">
-              Need a Custom Solution?
-            </h3>
-            <p className="text-xs xs:text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">
-              We create tailored solutions that perfectly fit your unique business requirements.
-            </p>
-            <button onClick={()=>{
-              const element=document.getElementById('Contact')
-              element.scrollIntoView({behavior:"smooth"})
-            }} className="w-full xs:w-auto bg-blue-900 hover:bg-blue-800 text-white px-4 xs:px-6 sm:px-8 py-2 xs:py-3 sm:py-3 rounded-full font-medium text-xs xs:text-sm sm:text-base transition-all duration-300 hover:shadow-lg active:scale-95 focus:outline-none focus:ring-4 focus:ring-blue-200">
-              Discuss Your Project
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );

@@ -37,7 +37,9 @@ const steps = [
 
 const Cards = () => {
   return (
-    <div className="w-full bg-blue-800  flex flex-col justify-center items-center py-12 sm:py-16 md:py-20 px-4 sm:px-6">
+    <div 
+    
+    className="w-full bg-blue-800  flex flex-col justify-center items-center py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       {/* Header */}
       <motion.div 
         className="text-center mb-12 sm:mb-16 md:mb-20"
@@ -143,7 +145,10 @@ const Cards = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 2.5, duration: 0.8 }}
       >
-        <button className="px-8 sm:px-10 md:px-12 py-3 sm:py-4 bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-semibold rounded-full shadow-2xl hover:shadow-cyan-400/30 hover:scale-105 transition-all duration-300 text-sm sm:text-base md:text-lg">
+        <button onClick={()=>{
+          const ele=document.getElementById('Contact')
+          ele.scrollIntoView({behavior:"smooth"})
+        }} className="px-8 sm:px-10 md:px-12 py-3 sm:py-4 bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-semibold rounded-full shadow-2xl hover:shadow-cyan-400/30 hover:scale-105 transition-all duration-300 text-sm sm:text-base md:text-lg">
           Start Your Project
         </button>
       </motion.div>
