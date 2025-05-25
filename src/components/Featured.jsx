@@ -85,7 +85,7 @@ const Featured = () => {
                   className={`w-full h-full object-cover transition-all duration-300 ${
                     hovering2 ? "scale-105" : "scale-100"
                   }`}
-                  src="public\assets\images\resumegenieweb.png"
+                  src="\assets\images\resumegenieweb.png"
                   alt="Resume Genie"
                 />
                 <h1 className="absolute text text-[8vh] xs:text-[6vh] sm:text-6xl md:text-[10vh] lg:text-[12vh] xl:text-[14vh] font-semibold overflow-hidden text-[#2B7FFF] top-4/5 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[40] pointer-events-none whitespace-nowrap">
@@ -147,7 +147,7 @@ const Featured = () => {
                   className={`w-full h-full object-cover transition-all duration-300 ${
                     hovering3 ? "scale-105" : "scale-100"
                   }`}
-                  src="public\assets\images\evolvxweb.png"
+                  src="\assets\images\evolvxweb.png"
                   alt="Evolv-X"
                 />
                 <h1 className="absolute text text-[8vh] xs:text-[6vh] sm:text-6xl md:text-[10vh] lg:text-[12vh] xl:text-[14vh] font-semibold overflow-hidden text-blue-800 top-4/5 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[40] pointer-events-none whitespace-nowrap">

@@ -16,7 +16,7 @@ const LandingPage = () => {
                 {idx === 1 && (
                   <motion.div
                     initial={{ width: 0 }}
-                    animate={{ width: "9vw" }}
+                    animate={{ width: "10vw"}}
                     transition={{ ease:[0.76, 0, 0.24, 1], duration: 1.5 , repeat:Infinity}}
                     className="w-[90px] sm:w-[90px] md:w-[100px] lg:w-[9vw] h-[50px] sm:h-[40px] md:h-[50px] lg:h-[5vw] relative bottom-[3px] sm:bottom-[4px] md:bottom-[6px] lg:bottom-[0.6vw] mr-2 sm:mr-3 md:mr-4 lg:mr-[0.7vw] bg-blue-900 rounded-lg sm:rounded-xl"
                   />
