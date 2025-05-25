@@ -106,7 +106,7 @@ const Navbar = () => {
             <div className="flex items-center gap-3">
               <img
                 className="w-12 h-12 sm:w-16 sm:h-16 object-contain drop-shadow-sm"
-                src="src\assets\images\logo.png" // Placeholder image for logo
+                src="src/assets/images/logo.png" // Placeholder image for logo
                 alt="Scasys Logo"
               />
               <h1 className="font-bold text-xl sm:text-2xl text-blue-900 tracking-tight">
