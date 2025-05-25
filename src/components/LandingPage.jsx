@@ -21,7 +21,7 @@ const LandingPage = () => {
                   />
                 )}
                 <h1
-                  className={`bg-gradient-to-r from-blue-900 to-blue-400 bg-clip-text uppercase text-[#212121] text-6xl sm:text-5xl md:text-8xl lg:text-7xl xl:text-[9vw] leading-tight sm:leading-tight md:leading-tight lg:leading-[9.2vw] font-bold ${
+                  className={`bg-gradient-to-r from-blue-900 to-blue-400 bg-clip-text uppercase text-[#212121] text-[14vw] sm:text-5xl md:text-8xl lg:text-7xl xl:text-[9vw] leading-tight sm:leading-tight md:leading-tight lg:leading-[9.2vw] font-bold ${
                     idx !== 0 && "-mt-2 sm:-mt-3 md:-mt-4 lg:-mt-7"
                   }`}
                 >
@@ -33,8 +33,8 @@ const LandingPage = () => {
         })}
       </div>
       
-      <div className="landing-text border-t border-gray-300 mt-20 py-15 sm:mt-16 md:mt-20 lg:mt-32 xl:mt-38 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0 sm:py-6 md:py-8 lg:py-2 px-4 sm:px-6 md:px-8 lg:px-13">
-        <div className="flex flex-col sm:flex-row gap-10 sm:gap-8 md:gap-12 lg:gap-16">
+      <div className="landing-text border-t border-gray-300 mt-[10vh] py-[7vh] sm:mt-16 md:mt-20 lg:mt-32 xl:mt-38 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0 sm:py-6 md:py-8 lg:py-2 px-4 sm:px-6 md:px-8 lg:px-13">
+        <div className="flex flex-col sm:flex-row gap-[4vh] sm:gap-8 md:gap-12 lg:gap-16">
           {[
             "Powering Your Digital Future",
             "From Launch to Loyalty",
