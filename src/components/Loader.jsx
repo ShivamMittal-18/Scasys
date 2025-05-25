@@ -327,7 +327,14 @@ export default function Loader({ onFinish }) {
           left: 0,
           top: 0,
         }}
-        initial={{ width: "80%", height: "80%", borderRadius: "1rem", top: "10%", left: "10%" }}
+        initial={{
+  width: "80%",
+  height: "80%",
+  borderRadius: "1rem",
+  top: "5%",
+  left: "10%",
+}}
+
         animate={
           isScaling
             ? {
@@ -342,7 +349,7 @@ export default function Loader({ onFinish }) {
         transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
       >
         {/* Hero Text */}
-        <div className="textstructure mt-[30vh] sm:mt-[30vh] md:mt-[30vh] lg:mt-[10vw] px-4 sm:px-6 md:px-8 lg:px-[2.5vw]">
+        <div className="textstructure mt-[22vh] sm:mt-[30vh] md:mt-[30vh] lg:mt-[10vw] px-4 sm:px-6 md:px-8 lg:px-[2.5vw]">
                 {["We Create", "We Innovate", "We Revolutionize"].map((item, idx) => {
                   return (
                     <div key={idx} className="masker">
@@ -356,7 +363,7 @@ export default function Loader({ onFinish }) {
                           />
                         )} */}
                         <h1
-                          className={`bg-gradient-to-r from-blue-900 to-blue-400 bg-clip-text uppercase text-[#212121] text-[14vw] sm:text-5xl md:text-8xl lg:text-7xl xl:text-[9vw] leading-tight sm:leading-tight md:leading-tight lg:leading-[9.2vw] font-bold ${
+                          className={`bg-gradient-to-r from-blue-900 to-blue-400 bg-clip-text uppercase text-[#212121] text-[15vw] sm:text-5xl md:text-8xl lg:text-7xl xl:text-[9vw] leading-tight sm:leading-tight md:leading-tight lg:leading-[9.2vw] font-bold ${
                             idx !== 0 && "-mt-2 sm:-mt-3 md:-mt-4 lg:-mt-7"
                           }`}
                         >
@@ -370,7 +377,7 @@ export default function Loader({ onFinish }) {
 
         {/* Loading % */}
         <div className="text absolute w-full bottom-5 sm:bottom-8 md:bottom-12 flex px-5 sm:px-8 md:px-12 pr-10 sm:pr-16 md:pr-20 justify-between text-black text-2xl sm:text-3xl md:text-4xl lg:text-8xl">
-          <span className="ab text-lg">Loading:</span>
+          <span className="ab text-lg ">Loading:</span>
           <span className="font-bold">{progress}%</span>
         </div>
       </motion.div>

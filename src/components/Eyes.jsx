@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback, useRef } from "react";
 
 const Eyes = () => {
   const [rotate1, setRotate1] = useState(0);
@@ -6,33 +6,62 @@ const Eyes = () => {
   const [offset1, setOffset1] = useState({ x: 0, y: 0 });
   const [offset2, setOffset2] = useState({ x: 0, y: 0 });
 
+  const animationRef = useRef();
+  const lastUpdateRef = useRef(0);
+
+  const updateEyes = useCallback((clientX, clientY) => {
+    const now = Date.now();
+    if (now - lastUpdateRef.current < 16) return;
+    lastUpdateRef.current = now;
+
+    // Eye 1
+    const deltaX1 = 588 - clientX;
+    const deltaY1 = 382 - clientY;
+    const angle1 = Math.atan2(deltaY1, deltaX1) * (180 / Math.PI);
+    const offsetX1 = Math.min(Math.max((clientX - 588) / 40, -10), 10);
+    const offsetY1 = Math.min(Math.max((clientY - 382) / 40, -10), 10);
+
+    // Eye 2
+    const deltaX2 = 845 - clientX;
+    const deltaY2 = 382 - clientY;
+    const angle2 = Math.atan2(deltaY2, deltaX2) * (180 / Math.PI);
+    const offsetX2 = Math.min(Math.max((clientX - 845) / 40, -10), 10);
+    const offsetY2 = Math.min(Math.max((clientY - 382) / 40, -10), 10);
+
+    if (animationRef.current) {
+      cancelAnimationFrame(animationRef.current);
+    }
+    
+    animationRef.current = requestAnimationFrame(() => {
+      setRotate1(angle1);
+      setOffset1({ x: offsetX1, y: offsetY1 });
+      setRotate2(angle2);
+      setOffset2({ x: offsetX2, y: offsetY2 });
+    });
+  }, []);
+
   useEffect(() => {
     const handleMouseMove = (e) => {
-      const mouseX = e.clientX;
-      const mouseY = e.clientY;
-
-      // Eye 1
-      const deltaX1 = 588 - mouseX;
-      const deltaY1 = 382 - mouseY;
-      const angle1 = Math.atan2(deltaY1, deltaX1) * (180 / Math.PI);
-      setRotate1(angle1);
-      const offsetX1 = Math.min(Math.max((mouseX - 588) / 40, -10), 10);
-      const offsetY1 = Math.min(Math.max((mouseY - 382) / 40, -10), 10);
-      setOffset1({ x: offsetX1, y: offsetY1 });
-
-      // Eye 2
-      const deltaX2 = 845 - mouseX;
-      const deltaY2 = 382 - mouseY;
-      const angle2 = Math.atan2(deltaY2, deltaX2) * (180 / Math.PI);
-      setRotate2(angle2);
-      const offsetX2 = Math.min(Math.max((mouseX - 845) / 40, -10), 10);
-      const offsetY2 = Math.min(Math.max((mouseY - 382) / 40, -10), 10);
-      setOffset2({ x: offsetX2, y: offsetY2 });
+      updateEyes(e.clientX, e.clientY);
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+    const handleTouchMove = (e) => {
+      if (e.touches.length > 0) {
+        updateEyes(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    window.addEventListener("touchmove", handleTouchMove, { passive: true });
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, [updateEyes]);
 
   return (
     <div className="relative w-full min-h-[100vh] overflow-hidden bg-[#F1F1F1]">
