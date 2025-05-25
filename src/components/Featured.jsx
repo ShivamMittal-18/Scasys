@@ -7,9 +7,7 @@ const Featured = () => {
   const [hovering3, sethovering3] = useState(false);
 
   return (
-    <div
-    
-    id="Our Projects" className="w-full py-4 sm:py-6 md:py-8 lg:py-[5vh]">
+    <div id="Our Projects" className="w-full py-4 sm:py-6 md:py-8 lg:py-[5vh]">
       <div className="px-3 sm:px-4 md:px-6 lg:px-[7vh] border-b pb-6 sm:pb-8 md:pb-10">
         <h1 className="uppercase start text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-[8vh] leading-none font-bold">
           Featured Projects
@@ -25,31 +23,34 @@ const Featured = () => {
             onMouseEnter={() => sethovering1(true)}
             onMouseLeave={() => sethovering1(false)}
           >
-            <h1 className="absolute text text-2xl xs:text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[16vh] font-semibold overflow-hidden text-blue-800 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[40] pointer-events-none whitespace-nowrap">
-              {"RE-VERSE.IN".split("").map((item, idx) => (
-                <span
-                  key={idx}
-                  className={`inline-block z-50 transition-transform duration-300 ${
-                    hovering1 ? 'transform translate-y-0' : 'transform translate-y-full'
-                  }`}
-                  style={{ 
-                    transitionDelay: `${idx * 30}ms`,
-                    transitionTimingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
-                  }}
-                >
-                  {item}
-                </span>
-              ))}
-            </h1>
             <div className="card w-full h-full overflow-hidden flex flex-col">
-              <div className="w-full h-[50%] sm:h-[55%] md:h-[60%] overflow-hidden rounded-lg">
+              <div className="relative w-full h-[50%] sm:h-[55%] md:h-[60%] overflow-hidden rounded-lg">
                 <img
                   className={`w-full h-full object-cover transition-all duration-300 ${
                     hovering1 ? "scale-105" : "scale-100"
                   }`}
-                  src="src\assets\images\reverse.png"
+                  src="\assets\images\reverse.png"
                   alt="E-Commerce Platform"
                 />
+                <h1 className="absolute text text-[8vh] xs:text-[6vh] sm:text-6xl md:text-[10vh] lg:text-[12vh] xl:text-[14vh] font-semibold overflow-hidden text-[#2B7FFF] top-4/5 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[40] pointer-events-none whitespace-nowrap">
+                  {"RE-VERSE.IN".split("").map((item, idx) => (
+                    <span
+                      key={idx}
+                      className={`inline-block z-50 transition-transform duration-300 ${
+                        hovering1
+                          ? "transform translate-y-0"
+                          : "transform translate-y-full"
+                      }`}
+                      style={{
+                        transitionDelay: `${idx * 30}ms`,
+                        transitionTimingFunction:
+                          "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+                      }}
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </h1>
               </div>
               <div className="p-2 xs:p-3 sm:p-4 md:p-6 flex flex-col flex-grow justify-between">
                 <div>
@@ -61,7 +62,9 @@ const Featured = () => {
                     payment processing and inventory management.
                   </p>
                 </div>
-                <button className="mt-auto inline-flex items-center justify-center px-3 xs:px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 border-2 border-blue-900 text-blue-900 rounded-lg font-medium hover:bg-blue-900 hover:text-white transition-all duration-300 group text-xs xs:text-sm sm:text-base">
+                <button onClick={()=>{
+                  window.open("https://re-verse.in/")
+                }} className="mt-auto inline-flex items-center justify-center px-3 xs:px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 border-2 border-blue-900 text-[#2B7FFF] rounded-lg font-medium hover:bg-blue-900 hover:text-white transition-all duration-300 group text-xs xs:text-sm sm:text-base">
                   View Demo
                   <ExternalLink className="ml-2 w-3 h-3 xs:w-4 xs:h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -75,31 +78,34 @@ const Featured = () => {
             onMouseEnter={() => sethovering2(true)}
             onMouseLeave={() => sethovering2(false)}
           >
-            <h1 className="absolute text text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-[16vh] font-semibold overflow-hidden text-[#CEEA68] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[40] pointer-events-none whitespace-nowrap">
+            
+            <div className="card w-full h-full overflow-hidden flex flex-col">
+              <div className="relative w-full h-[50%] sm:h-[55%] md:h-[60%] overflow-hidden rounded-lg">
+                <img
+                  className={`w-full h-full object-cover transition-all duration-300 ${
+                    hovering2 ? "scale-105" : "scale-100"
+                  }`}
+                  src="public\assets\images\resumegenieweb.png"
+                  alt="Resume Genie"
+                />
+                <h1 className="absolute text text-[8vh] xs:text-[6vh] sm:text-6xl md:text-[10vh] lg:text-[12vh] xl:text-[14vh] font-semibold overflow-hidden text-[#2B7FFF] top-4/5 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[40] pointer-events-none whitespace-nowrap">
               {"RESUME-GENIE".split("").map((item, idx) => (
                 <span
                   key={idx}
                   className={`inline-block transition-transform duration-300 ${
-                    hovering2 ? 'transform translate-y-0' : 'transform translate-y-full'
+                    hovering2
+                      ? "transform translate-y-0"
+                      : "transform translate-y-full"
                   }`}
-                  style={{ 
+                  style={{
                     transitionDelay: `${idx * 30}ms`,
-                    transitionTimingFunction: 'cubic-bezier(0.61, 1, 0.88, 1)'
+                    transitionTimingFunction: "cubic-bezier(0.61, 1, 0.88, 1)",
                   }}
                 >
                   {item}
                 </span>
               ))}
             </h1>
-            <div className="card w-full h-full overflow-hidden flex flex-col">
-              <div className="w-full h-[50%] sm:h-[55%] md:h-[60%] overflow-hidden rounded-lg">
-                <img
-                  className={`w-full h-full object-cover transition-all duration-300 ${
-                    hovering2 ? "scale-105" : "scale-100"
-                  }`}
-                  src="src\assets\images\resumegenieweb.png"
-                  alt="Resume Genie"
-                />
               </div>
               <div className="p-2 xs:p-3 sm:p-4 md:p-6 flex flex-col flex-grow justify-between">
                 <div>
@@ -113,7 +119,9 @@ const Featured = () => {
                     storage.
                   </p>
                 </div>
-                <button className="mt-auto inline-flex items-center justify-center px-3 xs:px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 border-2 border-blue-900 text-blue-900 rounded-lg font-medium hover:bg-blue-900 hover:text-white transition-all duration-300 group text-xs xs:text-sm sm:text-base">
+                <button onClick={()=>{
+                  window.open("https://resumegenie.live/")
+                }} className="mt-auto inline-flex items-center justify-center px-3 xs:px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 border-2 border-blue-900 text-blue-900 rounded-lg font-medium hover:bg-blue-900 hover:text-white transition-all duration-300 group text-xs xs:text-sm sm:text-base">
                   View Demo
                   <ExternalLink className="ml-2 w-3 h-3 xs:w-4 xs:h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -132,31 +140,35 @@ const Featured = () => {
             onMouseEnter={() => sethovering3(true)}
             onMouseLeave={() => sethovering3(false)}
           >
-            <h1 className="absolute text text-2xl xs:text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[16vh] font-semibold overflow-hidden text-emerald-500 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[40] pointer-events-none whitespace-nowrap">
+            
+            <div className="card w-full h-full overflow-hidden flex flex-col">
+              <div className="relative w-full h-[50%] sm:h-[55%] md:h-[60%] overflow-hidden rounded-lg">
+                <img
+                  className={`w-full h-full object-cover transition-all duration-300 ${
+                    hovering3 ? "scale-105" : "scale-100"
+                  }`}
+                  src="public\assets\images\evolvxweb.png"
+                  alt="Evolv-X"
+                />
+                <h1 className="absolute text text-[8vh] xs:text-[6vh] sm:text-6xl md:text-[10vh] lg:text-[12vh] xl:text-[14vh] font-semibold overflow-hidden text-blue-800 top-4/5 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[40] pointer-events-none whitespace-nowrap">
               {"EVOLV-X".split("").map((item, idx) => (
                 <span
                   key={idx}
                   className={`inline-block z-50 transition-transform duration-300 ${
-                    hovering3 ? 'transform translate-y-0' : 'transform translate-y-full'
+                    hovering3
+                      ? "transform translate-y-0"
+                      : "transform translate-y-full"
                   }`}
-                  style={{ 
+                  style={{
                     transitionDelay: `${idx * 30}ms`,
-                    transitionTimingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                    transitionTimingFunction:
+                      "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
                   }}
                 >
                   {item}
                 </span>
               ))}
             </h1>
-            <div className="card w-full h-full overflow-hidden flex flex-col">
-              <div className="w-full h-[50%] sm:h-[55%] md:h-[60%] overflow-hidden rounded-lg">
-                <img
-                  className={`w-full h-full object-cover transition-all duration-300 ${
-                    hovering3 ? "scale-105" : "scale-100"
-                  }`}
-                  src="src\assets\images\evolvxweb.png"
-                  alt="Evolv-X"
-                />
               </div>
               <div className="p-2 xs:p-3 sm:p-4 md:p-6 flex flex-col flex-grow justify-between">
                 <div>
@@ -164,10 +176,14 @@ const Featured = () => {
                     Evolvx – An Entrepreneurial Bootcamp
                   </h2>
                   <p className="text-xs xs:text-sm sm:text-base text-gray-600 mb-2 sm:mb-3 md:mb-4 leading-relaxed">
-                    A web-based platform that empowers future entrepreneurs through structured bootcamps, real-world mentorship, and collaborative learning experiences.
+                    A web-based platform that empowers future entrepreneurs
+                    through structured bootcamps, real-world mentorship, and
+                    collaborative learning experiences.
                   </p>
                 </div>
-                <button className="mt-auto inline-flex justify-center items-center px-3 xs:px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 border-2 border-blue-900 text-blue-900 rounded-lg font-medium hover:bg-blue-900 hover:text-white transition-all duration-300 group text-xs xs:text-sm sm:text-base">
+                <button onClick={()=>{
+                  window.open("https://evolvx.org.in/")
+                }} className="mt-auto inline-flex justify-center items-center px-3 xs:px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 border-2 border-blue-900 text-blue-900 rounded-lg font-medium hover:bg-blue-900 hover:text-white transition-all duration-300 group text-xs xs:text-sm sm:text-base">
                   View Demo
                   <ExternalLink className="ml-2 w-3 h-3 xs:w-4 xs:h-4 group-hover:translate-x-1 transition-transform" />
                 </button>

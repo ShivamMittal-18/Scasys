@@ -1,7 +1,8 @@
 import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import { FaArrowUpLong } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 
 const LandingPage = () => {
   return (
@@ -15,8 +16,8 @@ const LandingPage = () => {
                 {idx === 1 && (
                   <motion.div
                     initial={{ width: 0 }}
-                    animate={{ width: "10vw" }}
-                    transition={{ ease: [0.83, 0, 0.17, 1], duration: 1.5 }}
+                    animate={{ width: "9vw" }}
+                    transition={{ ease:[0.76, 0, 0.24, 1], duration: 1.5 , repeat:Infinity}}
                     className="w-[90px] sm:w-[90px] md:w-[100px] lg:w-[9vw] h-[50px] sm:h-[40px] md:h-[50px] lg:h-[5vw] relative bottom-[3px] sm:bottom-[4px] md:bottom-[6px] lg:bottom-[0.6vw] mr-2 sm:mr-3 md:mr-4 lg:mr-[0.7vw] bg-blue-900 rounded-lg sm:rounded-xl"
                   />
                 )}
@@ -36,8 +37,8 @@ const LandingPage = () => {
       <div className="landing-text border-t border-gray-300 mt-[10vh] py-[7vh] sm:mt-16 md:mt-20 lg:mt-32 xl:mt-38 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0 sm:py-6 md:py-8 lg:py-2 px-4 sm:px-6 md:px-8 lg:px-13">
         <div className="flex flex-col sm:flex-row gap-[4vh] sm:gap-8 md:gap-12 lg:gap-16">
           {[
-            "Powering Your Digital Future",
-            "From Launch to Loyalty",
+            "Power Your Growth",
+            "Automate and Thrive",
             "Embrace your future"
           ].map((item, idx) => {
             return (
@@ -51,9 +52,14 @@ const LandingPage = () => {
           })}
         </div>
         
-        <div className="start group flex justify-center items-center gap-2 relative mt-7 sm:mt-0">
+        <div 
+        onClick={()=>{
+          const ele=document.getElementById('Contact')
+          ele.scrollIntoView({behavior:"smooth"})
+        }}
+         className="start group flex justify-center items-center gap-2 relative mt-7 sm:mt-0">
           {/* Text Button */}
-          <div className="relative overflow-hidden px-3 sm:px-4 md:px-5 lg:px-6 uppercase py-2 sm:py-2.5 md:py-3 lg:py-1 border border-gray-400 rounded-full transition-all duration-300 text-black group-hover:text-white text-xs sm:text-sm md:text-base">
+          <div  className="relative overflow-hidden px-3 sm:px-4 md:px-5 lg:px-6 uppercase py-2 sm:py-2.5 md:py-3 lg:py-1 border border-gray-400 rounded-full transition-all duration-300 text-black group-hover:text-white text-xs sm:text-sm md:text-base">
             <span className="relative z-10">Start the project</span>
             <div className="absolute inset-0 z-0 bg-blue-900 origin-right scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out rounded-full"></div>
           </div>

@@ -114,8 +114,11 @@ const Playful = () => {
   }, []);
 
   return (
-    <div className="text relative w-full min-h-[50vh] sm:h-[60vh] md:h-[60vh] lg:h-screen overflow-hidden bg-blue-500">
-      <div className="relative w-full bg-cover bg-center h-full pt-8 sm:pt-12 md:pt-16 lg:pt-20">
+    <div 
+    
+    className="text relative w-full min-h-[50vh] sm:h-[60vh] md:h-[60vh] lg:h-screen overflow-hidden bg-blue-500">
+      <div
+     className="relative w-full bg-cover bg-center h-full pt-8 sm:pt-12 md:pt-16 lg:pt-20">
         <div className="flex flex-col justify-center items-center px-2 sm:px-4">
           <div className="text-center">
             <h1 className="text-[#212121] text-[12vh] sm:text-[15vh] md:text-[20vh] lg:text-[25vh] xl:text-[30vh] font-bold leading-none sm:leading-[0.85] md:leading-none">
