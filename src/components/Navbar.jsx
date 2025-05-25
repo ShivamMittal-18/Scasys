@@ -74,33 +74,28 @@ const Navbar = () => {
     <>
       {/* Tailwind CSS and custom animation styles */}
       <style>
-        {`
-        /* Keyframes for the slide-in animation */
-        @keyframes slideIn {
-          from {
-            transform: translateY(-100%); /* Start from above the viewport */
-            opacity: 0; /* Start fully transparent */
-          }
-          to {
-            transform: translateY(0); /* End at its normal position */
-            opacity: 1; /* End fully opaque */
-          }
-        }
+  {`
+    @keyframes slideIn {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .animate-slide-in {
+      animation: slideIn 0.5s ease-out forwards;
+    }
+  `}
+</style>
 
-        /* Class to apply the slide-in animation */
-        .animate-slide-in {
-          animation: slideIn 0.3s ease-out forwards; /* Apply animation for 0.3s with ease-out timing */
-        }
-        `}
-      </style>
 
       {/* Main Navbar Container */}
-      <div
-        className={`w-full fixed z-[999] transition-transform duration-500 ease-in-out font-['Neue Montreal'] ${
-          isVisible ? "translate-y-0" : "-translate-y-full" // Controls navbar show/hide animation
-        }`}
-      >
-        <div className="bg-white/90 backdrop-blur-lg shadow-xl border-b border-gray-200/50">
+    <div className={`w-full start fixed z-[999] transition-transform duration-500 ease-in-out ${isVisible ? "translate-y-0 animate-slide-in" : "-translate-y-full"}`}>
+
+        <div className="bg-blur backdrop-blur-lg ">
           <div className="px-5 sm:px-8 py-4 flex justify-between items-center max-w-7xl mx-auto">
             {/* Logo Section */}
             <div className="flex items-center gap-3">
@@ -132,7 +127,7 @@ const Navbar = () => {
                   <button
                     key={idx}
                     onClick={() => scrollToSection(item)} // Scrolls to section on click
-                    className="text-gray-700 hover:text-blue-900 font-medium text-base capitalize transition-all duration-300 relative group py-2"
+                    className="text-gray-700 hover:text-blue-900 font-semibold text-base capitalize transition-all duration-300 relative group py-2"
                   >
                     {item}
                     {/* Underline animation on hover */}
@@ -159,7 +154,7 @@ const Navbar = () => {
                   <button
                     key={idx}
                     onClick={() => scrollToSection(item)} // Scrolls to section on click
-                    className="text-gray-700 hover:text-blue-900 font-medium text-lg text-left py-2" // Added padding for better touch target
+                    className="text-gray-700 hover:text-blue-900 font-semibold text-lg text-left py-2" // Added padding for better touch target
                   >
                     {item}
                   </button>
