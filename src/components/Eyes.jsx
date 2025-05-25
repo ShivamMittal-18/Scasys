@@ -39,7 +39,12 @@ const Eyes = () => {
       <div
         data-scroll
         data-scroll-speed="-0.7"
-        className='absolute scroll-smooth w-full bg-cover bg-center h-full top-0 bg-[url("https://ochi.design/wp-content/uploads/2022/05/Top-Viewbbcbv-1-scaled.jpg")]'
+        className='absolute w-full bg-cover bg-center h-full top-0 bg-[url("https://ochi.design/wp-content/uploads/2022/05/Top-Viewbbcbv-1-scaled.jpg")]'
+        style={{
+          transform: 'translate3d(0, 0, 0)',
+          backfaceVisibility: 'hidden',
+          perspective: '1000px'
+        }}
       >
         <div className="flex gap-10 justify-center absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[85%] ">
           {/* Eye 1 */}
