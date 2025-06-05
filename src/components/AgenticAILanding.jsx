@@ -4,8 +4,8 @@ import { Bot, Workflow, Zap, ArrowRight, CheckCircle, Cpu, Network, Settings, Pl
 const AgenticAILanding = () => {
   const [isAnimating, setIsAnimating] = useState(true);
   const [currentFeature, setCurrentFeature] = useState(0);
-  // Removed robotPositions state
-  const [scrollY, setScrollY] = useState(0);
+  // scrollY state and parallaxOffset are removed as they are the primary cause of jittering.
+  // const [scrollY, setScrollY] = useState(0); 
   const [visibleElements, setVisibleElements] = useState(new Set());
 
   const sectionRefs = {
@@ -42,17 +42,14 @@ const AgenticAILanding = () => {
 
   const [activeSteps, setActiveSteps] = useState(workflowSteps);
 
-  // Removed robotPeekPositions data
-
-  // Scroll event handler
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // Removed scroll event handler as parallax is removed.
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrollY(window.scrollY);
+  //   };
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
   // Intersection Observer for scroll animations
   useEffect(() => {
@@ -106,53 +103,48 @@ const AgenticAILanding = () => {
     return () => clearInterval(stepInterval);
   }, [isAnimating]);
 
-  // Removed single robot peeking animation useEffect
-
-  // Removed PeekingRobot component definition
-
-  const parallaxOffset = scrollY * 0.5;
+  // Parallax offset is now removed.
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 text-gray-900 relative overflow-hidden">
-      {/* Removed Peeking Robots rendering */}
-
-      {/* Animated Background */}
-      <div className="absolute inset-0" style={{ transform: `translateY(${parallaxOffset}px)` }}>
-        <div className="absolute inset-0 bg-gradient-radial from-blue-200/30 via-transparent to-transparent animate-pulse"></div>
-        <div className="absolute inset-0 bg-gradient-radial from-indigo-200/20 via-transparent to-transparent animate-pulse" style={{animationDelay: '2s'}}></div>
-        <div className="absolute inset-0 animate-spin-slow bg-gradient-conic from-transparent via-blue-200/10 to-transparent"></div>
+      {/* Animated Background - Removed parallax effect */}
+      <div className="absolute inset-0"> 
+        {/* Simplified background animations to reduce load */}
+        <div className="absolute inset-0 bg-gradient-radial from-blue-200/20 via-transparent to-transparent animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-radial from-indigo-200/10 via-transparent to-transparent animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute inset-0 animate-spin-slow bg-gradient-conic from-transparent via-blue-100/5 to-transparent"></div>
         
-        {/* Floating Particles */}
-        {[...Array(25)].map((_, i) => (
+        {/* Floating Particles - Reduced number */}
+        {[...Array(15)].map((_, i) => ( // Reduced from 25 to 15
           <div
             key={i}
             className="absolute w-1 h-1 bg-blue-400 rounded-full animate-pulse opacity-60"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${3 + Math.random() * 4}s`,
+              animationDelay: `${Math.random() * 4}s`, // Slightly faster random delay
+              animationDuration: `${4 + Math.random() * 3}s`, // Slightly faster duration
             }}
           />
         ))}
         
-        {/* Additional cyan particles */}
-        {[...Array(15)].map((_, i) => (
+        {/* Additional cyan particles - Reduced number */}
+        {[...Array(10)].map((_, i) => ( // Reduced from 15 to 10
           <div
             key={`cyan-${i}`}
             className="absolute w-2 h-2 bg-cyan-300 rounded-full animate-pulse opacity-40"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 7}s`,
-              animationDuration: `${4 + Math.random() * 3}s`,
+              animationDelay: `${Math.random() * 6}s`, // Slightly faster random delay
+              animationDuration: `${3 + Math.random() * 2}s`, // Slightly faster duration
             }}
           />
         ))}
       </div>
 
-      {/* Neural Network Lines */}
-      <svg className="absolute inset-0 w-full h-full opacity-20" style={{ zIndex: 1 }}>
+      {/* Neural Network Lines - Reduced number and intensity */}
+      <svg className="absolute inset-0 w-full h-full opacity-15" style={{ zIndex: 1 }}> {/* Reduced opacity */}
         <defs>
           <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#3b82f6" />
@@ -160,7 +152,7 @@ const AgenticAILanding = () => {
             <stop offset="100%" stopColor="#3b82f6" />
           </linearGradient>
         </defs>
-        {[...Array(20)].map((_, i) => (
+        {[...Array(10)].map((_, i) => ( // Reduced from 20 to 10
           <line
             key={i}
             x1={`${Math.random() * 100}%`}
@@ -168,9 +160,9 @@ const AgenticAILanding = () => {
             x2={`${Math.random() * 100}%`}
             y2={`${Math.random() * 100}%`}
             stroke="url(#lineGradient)"
-            strokeWidth="1"
+            strokeWidth="0.8" // Slightly thinner lines
             className="animate-pulse"
-            style={{ animationDelay: `${Math.random() * 3}s` }}
+            style={{ animationDelay: `${Math.random() * 2}s`, animationDuration: `${2 + Math.random() * 2}s` }} // Faster pulse
           />
         ))}
       </svg>
@@ -386,13 +378,7 @@ const AgenticAILanding = () => {
         .animate-spin-slow {
           animation: spin-slow 20s linear infinite;
         }
-        @keyframes bounce-subtle {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-5px); }
-        }
-        .animate-bounce-subtle {
-          animation: bounce-subtle 3s ease-in-out infinite;
-        }
+        /* Removed bounce-subtle as it was for the robot */
         @keyframes slide-up-1 {
           from { transform: translateY(60px); opacity: 0; }
           to { transform: translateY(0); opacity: 1; }
