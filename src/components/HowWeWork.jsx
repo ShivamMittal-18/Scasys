@@ -1,5 +1,7 @@
 import React from 'react';
 import { FileText, Figma, Code, Cloud, Settings } from 'lucide-react';
+import { easeInOut, motion } from "framer-motion";
+
 
 const HowWeWork = () => {
   const steps = [
@@ -8,7 +10,7 @@ const HowWeWork = () => {
       title: "SRS Documentation",
       description: "We start by documenting your requirements in detail to ensure clarity and alignment.",
       icon: FileText,
-      color: "bg-blue-900"
+      color: "bg-blue-600"
     },
     {
       id: 2,
@@ -22,21 +24,21 @@ const HowWeWork = () => {
       title: "Full-stack Development",
       description: "Our engineers build robust, scalable applications using modern technologies.",
       icon: Code,
-      color: "bg-blue-500"
+      color: "bg-blue-600"
     },
     {
       id: 4,
       title: "Cloud Hosting",
       description: "We deploy your application to reliable, high-performance cloud infrastructure.",
       icon: Cloud,
-      color: "bg-blue-400"
+      color: "bg-blue-600"
     },
     {
       id: 5,
       title: "Post-launch Management",
       description: "We provide ongoing support, maintenance, and optimization services.",
       icon: Settings,
-      color: "bg-blue-300"
+      color: "bg-blue-600"
     }
   ];
 
@@ -47,16 +49,14 @@ const HowWeWork = () => {
   };
 
   return (
-    <div 
+    <motion.div 
       id="How we work" 
-      data-scroll 
-      data-scroll-speed="" 
-      className="bg-[#F1F1F1] rounded-tl-3xl rounded-tr-3xl  w-full flex items-center justify-center px-3 sm:px-4 md:px-6 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-20"
+      className="bg-[#FEFEFE] rounded-tl-3xl rounded-tr-3xl  w-full flex items-center justify-center px-3 sm:px-4 md:px-6 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-20"
     >
-      <div className="w-full max-w-7xl mx-auto ">
+      <div className=" w-full max-w-7xl mx-auto ">
         {/* Header */}
-        <div className="text-center mb-10 sm:mb-12 md:mb-16 lg:mb-20">
-          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-blue-900 mb-3 sm:mb-4 md:mb-6 leading-tight">
+        <div className=" text-center mb-10 sm:mb-12 md:mb-16 lg:mb-20">
+          <h2 className=" text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-blue-900 mb-3 sm:mb-4 md:mb-6 leading-tight">
             How We Work
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-2 sm:px-0">
@@ -122,7 +122,7 @@ const HowWeWork = () => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

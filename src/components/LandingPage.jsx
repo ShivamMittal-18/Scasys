@@ -6,8 +6,8 @@ import { ScrollSmoother } from "gsap/ScrollSmoother";
 
 const LandingPage = () => {
   return (
-    <div 
-    className="z-10 min-h-screen w-full pt-2 sm:pt-1 md:pt-0.5 bg-[#F1F1F1]">
+    <motion.div 
+    className="z-10 min-h-screen w-full pt-2 sm:pt-1 md:pt-0.5 bg-[#FEFEFE]">
       <div className="textstructure mt-[22vh] sm:mt-[30vh] md:mt-[30vh] lg:mt-[10vw] px-4 sm:px-6 md:px-8 lg:px-[2.5vw]">
         {["We Create", "We Innovate", "We Revolutionize"].map((item, idx) => {
           return (
@@ -98,7 +98,7 @@ const LandingPage = () => {
     </div>
   </motion.div>
 </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

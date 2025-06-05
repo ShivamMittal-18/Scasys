@@ -10,3 +10,10 @@
   font-weight: 400; /* or 'normal' if it's not semibold */
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Agile';
+  src: url('./agile.ttf') format('truetype');
+  font-weight: 400; /* or 'normal' if it's not semibold */
+  font-style: normal;
+}

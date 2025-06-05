@@ -47,7 +47,7 @@
 
 //           {/* White content card */}
 //           <motion.div
-//             className="z-10 min-h-[80%] w-[80%] pt-2 sm:pt-1 md:pt-0.5 bg-[#F1F1F1]"
+//             className="z-10 min-h-[80%] w-[80%] pt-2 sm:pt-1 md:pt-0.5 bg-[#FEFEFE]"
 //             initial={{ scale: 0.95 }}
 //             animate={isScaling ? { 
 //               width: "100vw", 
@@ -64,7 +64,7 @@
 //             }}
 //           >
 //             <div className="relative text">
-//               {/* <div className="bg-[#F1F1F1] font-bold text-2xl text-black">Scasys</div> */}
+//               {/* <div className="bg-[#FEFEFE] font-bold text-2xl text-black">Scasys</div> */}
 //               <img className="" src="public\assets\images\loader1.png" alt="" />
 //               <div className="absolute w-full bottom-0 flex p-5 pr-20 justify-between text-black pt-4 text-5xl">
 //                 <span>Loading:</span>
@@ -127,7 +127,7 @@
 
 //           {/* White content card */}
 //           <motion.div
-//             className="z-10 min-h-[80%] w-[80%] pt-2 sm:pt-1 md:pt-0.5 bg-[#F1F1F1] flex flex-col justify-center items-center relative"
+//             className="z-10 min-h-[80%] w-[80%] pt-2 sm:pt-1 md:pt-0.5 bg-[#FEFEFE] flex flex-col justify-center items-center relative"
 //             initial={{ scale: 0.95 }}
 //             animate={isScaling ? { 
 //               width: "100vw", 
@@ -220,7 +220,7 @@
 
 //           {/* White content card */}
 //           <motion.div
-//             className="z-10 min-h-[80%] w-[80%] pt-2 sm:pt-1 md:pt-0.5 bg-[#F1F1F1] flex flex-col justify-start items-start relative"
+//             className="z-10 min-h-[80%] w-[80%] pt-2 sm:pt-1 md:pt-0.5 bg-[#FEFEFE] flex flex-col justify-start items-start relative"
 //             initial={{ width: "80%", height: "80%", borderRadius: "1rem" }}
 //             animate={
 //               isScaling
@@ -321,7 +321,7 @@ export default function Loader({ onFinish }) {
 
       {/* Expanding content card */}
       <motion.div
-        className="relative z-10 pt-2 sm:pt-1 md:pt-0.5 bg-[#F1F1F1] flex flex-col justify-start items-start"
+        className="relative z-10 pt-2 sm:pt-1 md:pt-0.5 bg-[#FEFEFE] flex flex-col justify-start items-start"
         style={{
           position: "absolute",
           left: 0,

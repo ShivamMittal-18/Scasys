@@ -95,17 +95,17 @@ const Navbar = ({ loading }) => {
       {/* Main Navbar Container */}
     <div className={`w-full start fixed z-[999] transition-transform duration-500 ease-in-out ${isVisible ? "translate-y-0 animate-slide-in" : "-translate-y-full"}`}>
 
-        <div className={`${loading ? "bg-transparent" : "backdrop-blur-lg bg-white/60"} transition-colors duration-500`}>
+        <div className={`${loading ? "bg-transparent" : "backdrop-blur-lg bg-[#FCFCF9]"} shadow-lg transition-colors duration-500`}>
 
           <div className="px-5 sm:px-8 py-4 flex justify-between items-center max-w-7xl mx-auto">
             {/* Logo Section */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1">
               <img
-                className="w-12 h-12 sm:w-16 sm:h-16 object-contain drop-shadow-sm"
-                src="\assets\images\logo.png"
+                className="w-12 h-12 sm:w-16 sm:h-16 object-contain "
+                src="\assets\images\image.png"
                 alt="Scasys Logo"
               />
-              <h1 className="font-bold text-xl sm:text-2xl text-blue-900 tracking-tight">
+              <h1 className="font-bold text-xl logo-text sm:text-2xl uppercase text-blue-900 ">
                 Scasys
               </h1>
             </div>

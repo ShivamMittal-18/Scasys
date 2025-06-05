@@ -121,7 +121,7 @@ const Featured = () => {
                 </div>
                 <button onClick={()=>{
                   window.open("https://resumegenie.live/")
-                }} className="mt-auto inline-flex items-center justify-center px-3 xs:px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 border-2 border-blue-900 text-blue-900 rounded-lg font-medium hover:bg-blue-900 hover:text-white transition-all duration-300 group text-xs xs:text-sm sm:text-base">
+                }} className="mt-auto inline-flex items-center justify-center px-3 xs:px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 border-2 border-blue-900 text-[#2B7FFF] rounded-lg font-medium hover:bg-blue-900 hover:text-white transition-all duration-300 group text-xs xs:text-sm sm:text-base">
                   View Demo
                   <ExternalLink className="ml-2 w-3 h-3 xs:w-4 xs:h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -150,7 +150,7 @@ const Featured = () => {
                   src="\assets\images\evolvxweb.png"
                   alt="Evolv-X"
                 />
-                <h1 className="absolute text text-[8vh] xs:text-[6vh] sm:text-6xl md:text-[10vh] lg:text-[12vh] xl:text-[14vh] font-semibold overflow-hidden text-blue-800 top-4/5 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[40] pointer-events-none whitespace-nowrap">
+                <h1 className="absolute text text-[8vh] xs:text-[6vh] sm:text-6xl md:text-[10vh] lg:text-[12vh] xl:text-[14vh] font-semibold overflow-hidden text-[#2B7FFF] top-4/5 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[40] pointer-events-none whitespace-nowrap">
               {"EVOLV-X".split("").map((item, idx) => (
                 <span
                   key={idx}

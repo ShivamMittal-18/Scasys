@@ -33,7 +33,7 @@ const GetInTouch = () => {
   return (
     <div
       id="Contact"
-      className="bg-gray-50 py-10 px-4 sm:px-6 lg:px-8 w-full"
+      className="bg-[#FEFEFE] py-10 px-4 sm:px-6 lg:px-8 w-full border-t-1 border-[#f1f1f1]"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}

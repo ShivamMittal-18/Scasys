@@ -14,6 +14,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 import HowWeWork from './components/HowWeWork';
 import OurServices from './components/OurServices';
 import WhyScacys from './components/WhyScasys';
+import AgenticAILanding from './components/AgenticAILanding';
 
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 
@@ -50,7 +51,7 @@ const App = () => {
         <div
           data-scroll-container
           ref={scrollRef}
-          className="w-full bg-[#F1F1F1]"
+          className="w-full bg-[#FEFFFF]"
         >
           <Navbar loading={!loadingDone} />
           <LandingPage />
@@ -62,6 +63,7 @@ const App = () => {
           <Featured />
           <Playful />
           <WhyScacys />
+          <AgenticAILanding/>
           <GetInTouch />
           <Footer />
         </div>

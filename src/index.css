@@ -4,12 +4,12 @@
 
 
 body{
-    background-color: #F1F1F1;
+    background-color: #FEFEFE;
 }
 .masker,.text{
     font-family: 'Founders Grotesk';
 }
-.start,.landing-text{
+.landing-text,.start{
      font-family: 'Neue Montreal';
 }
 #marquee::-webkit-scrollbar{
@@ -24,3 +24,6 @@ body::-webkit-scrollbar{
 .card{
     transform: translate(0);
 } 
+.logo-text{
+    font-family: 'Agile';
+}

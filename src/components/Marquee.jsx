@@ -2,15 +2,14 @@ import React from 'react';
 import { motion } from 'motion/react';
 
 const Marquee = () => {
-  const text = "We are scasys";
+  const text = "WE ARE SCASYS";
 
   return (
-    <div
-  
+    <motion.div
       id="marquee"
-      className="w-full z-10 py-10 md:py-12 bg-[#1C398E] overflow-hidden"
+      className=" w-full z-10 py-10 md:py-12 bg-[#1C398E] overflow-hidden"
     >
-      <div className="text border-t border-b border-green-100 flex whitespace-nowrap">
+      <div className="animate-marquee text border-t border-b border-green-100 flex whitespace-nowrap">
         {[...Array(3)].map((_, i) => (
           <motion.h1
             key={i}
@@ -23,7 +22,7 @@ const Marquee = () => {
           </motion.h1>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
