@@ -69,12 +69,12 @@ console.log("MAIL_PASS:", process.env.MAIL_PASS ? "LOADED" : "MISSING");
                   Customer Information
                 </h3>
                 
-                <div style="margin-bottom: 15px;">
+                <div style="margin-bottom: 15px; flex flex-wrap">
                   <span style="color: #1C398E; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Name:</span>
                   <span style="color: #333; margin: 5px 0 0 0; font-size: 16px; font-weight: 500;">${name}</span>
                 </div>
                 
-                <div>
+                <div classname="flex flex-wrap">
                   <span style="color: #1C398E; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Email:</span>
                   <span style="color: #2B7FFF; margin: 5px 0 0 0; font-size: 16px; font-weight: 500;">
                     <a href="mailto:${email}" style="color: #2B7FFF; text-decoration: none;">${email}</a>
