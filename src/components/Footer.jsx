@@ -19,7 +19,7 @@ const Footer = () => {
           </div>
           <div>
             <h1 className="start font-black text-3xl">Scasys</h1>
-            <h1 className="start font-semibold text-sm">Scays Technologies</h1>
+            <h1 className="start font-semibold text-sm">scasys Technologies</h1>
             <div className="w-full h-[10vh] mb-10 start py-8">
               <h1>&copy;All Rights Reserved</h1>
             </div>
