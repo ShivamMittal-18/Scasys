@@ -1,6 +1,6 @@
 import { CheckCircle, Zap, Users, Shield, TrendingUp } from "lucide-react";
 
-export default function WhyScacys() {
+export default function Whyscasys() {
   const values = [
     {
       icon: TrendingUp,
@@ -50,7 +50,7 @@ export default function WhyScacys() {
               Why
             </span>
             <span className="start bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 bg-clip-text text-transparent ml-4">
-              Scacys
+              scasys
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
@@ -129,7 +129,7 @@ export default function WhyScacys() {
                       <div className="w-full h-px bg-gradient-to-r from-blue-400/40 to-transparent"></div>
                     </div>
                     <p className="text-gray-700 leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
-                      At Scacys, we believe in a collaborative, transparent approach to
+                      At scasys, we believe in a collaborative, transparent approach to
                       web development. We work closely with our clients at every stage,
                       ensuring that the final product not only meets but exceeds
                       expectations.
