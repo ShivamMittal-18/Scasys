@@ -46,10 +46,10 @@ export default function WhyScacys() {
             </span>
           </div>
           <h1 className="text-6xl md:text-7xl font-black mb-8">
-            <span className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600 bg-clip-text text-transparent">
+            <span className="start bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600 bg-clip-text text-transparent">
               Why
             </span>
-            <span className="bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 bg-clip-text text-transparent ml-4">
+            <span className="start bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 bg-clip-text text-transparent ml-4">
               Scacys
             </span>
           </h1>

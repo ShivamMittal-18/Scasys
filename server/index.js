@@ -71,14 +71,14 @@ console.log("MAIL_PASS:", process.env.MAIL_PASS ? "LOADED" : "MISSING");
                 
                 <div style="margin-bottom: 15px;">
                   <span style="color: #1C398E; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Name:</span>
-                  <p style="color: #333; margin: 5px 0 0 0; font-size: 16px; font-weight: 500;">${name}</p>
+                  <span style="color: #333; margin: 5px 0 0 0; font-size: 16px; font-weight: 500;">${name}</span>
                 </div>
                 
                 <div>
                   <span style="color: #1C398E; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Email:</span>
-                  <p style="color: #2B7FFF; margin: 5px 0 0 0; font-size: 16px; font-weight: 500;">
+                  <span style="color: #2B7FFF; margin: 5px 0 0 0; font-size: 16px; font-weight: 500;">
                     <a href="mailto:${email}" style="color: #2B7FFF; text-decoration: none;">${email}</a>
-                  </p>
+                  </span>
                 </div>
               </div>
               
