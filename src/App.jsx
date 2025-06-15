@@ -1,4 +1,7 @@
+// src/App.jsx
 import React, { useState, useEffect, useRef } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Loader from './components/Loader';
 import Navbar from './components/Navbar';
 import LandingPage from './components/LandingPage';
@@ -15,10 +18,15 @@ import HowWeWork from './components/HowWeWork';
 import OurServices from './components/OurServices';
 import WhyScacys from './components/WhyScasys';
 import AgenticAILanding from './components/AgenticAILanding';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsOfService from './components/TermsOfService';
+import CookiePolicy from './components/CookiePolicy';
+import SecurityPolicy from './components/SecurityPolicy';
+
 
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 
-const App = () => {
+const MainLanding = () => {
   const [loadingDone, setLoadingDone] = useState(false);
   const scrollRef = useRef(null);
   const scrollInstance = useRef(null);
@@ -28,10 +36,9 @@ const App = () => {
       scrollInstance.current = new LocomotiveScroll({
         el: scrollRef.current,
         smooth: true,
-        lerp: 0.08, // smoother scroll
+        lerp: 0.08,
       });
 
-      // optional: update on resize or route change
       setTimeout(() => {
         scrollInstance.current?.update();
       }, 100);
@@ -43,32 +50,42 @@ const App = () => {
     }
   }, [loadingDone]);
 
-  return (
-    <>
-      {!loadingDone && <Loader onFinish={() => setLoadingDone(true)} />}
+  if (!loadingDone) {
+    return <Loader onFinish={() => setLoadingDone(true)} />;
+  }
 
-      {loadingDone && (
-        <div
-          data-scroll-container
-          ref={scrollRef}
-          className="w-full bg-[#FEFFFF]"
-        >
-          <Navbar loading={!loadingDone} />
-          <LandingPage />
-          <Marquee />
-          <HowWeWork />
-          <Eyes />
-          <OurServices />
-          <Cards />
-          <Featured />
-          <Playful />
-          <WhyScacys />
-          <AgenticAILanding/>
-          <GetInTouch />
-          <Footer />
-        </div>
-      )}
-    </>
+  return (
+    <div data-scroll-container ref={scrollRef} className="w-full bg-[#FEFFFF]">
+      <Navbar loading={!loadingDone} />
+      <LandingPage />
+      <Marquee />
+      <HowWeWork />
+      <Eyes />
+      <OurServices />
+      <Cards />
+      <Featured />
+      <Playful />
+      <WhyScacys />
+      <AgenticAILanding />
+      <GetInTouch />
+      <Footer />
+    </div>
+  );
+};
+
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainLanding />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService/>} />
+        <Route path="/cookie-policy" element={<CookiePolicy/>} />
+        <Route path="/security-policy" element={<SecurityPolicy/>} />
+
+
+      </Routes>
+    </Router>
   );
 };
 
